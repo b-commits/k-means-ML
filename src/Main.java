@@ -14,11 +14,11 @@ public class Main {
         ArrayList<Iris> centroids = new ArrayList<>();
         int k;
         Scanner input = new Scanner(System.in);
-        System.out.println("Podaj parametr k:");
+        System.out.println("Enter k:");
         k = input.nextInt();
 
 
-        System.out.println("==========PRZED ROZPOCZĘCIEM================");
+        System.out.println("==========INITIAL ASSIGNMENT================");
         intializeCentroids(irises, centroids, k);
         assignIrisToCentroids(irises, centroids);
         printInfo(centroids);
@@ -31,7 +31,7 @@ public class Main {
             System.out.println("============================================");
         }
 
-        System.out.println("==========PO ZAKONCZENIU================");
+        System.out.println("===================RESULT===================");
         clearAssignments(centroids);
         assignIrisToCentroids(irises, centroids);
         printInfo(centroids);
