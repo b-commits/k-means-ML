@@ -38,8 +38,6 @@ public class Main {
 
     }
 
-
-
     public static void intializeCentroids(ArrayList<Iris> irises, ArrayList<Iris> centroids, int k) {
         Random r = new Random();
         for (int i = 0; i < k; i++) {
@@ -156,8 +154,5 @@ public class Main {
             System.out.println(sumOfDistances);
         }
     }
-
-
-
 
 }
