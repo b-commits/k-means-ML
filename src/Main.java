@@ -75,30 +75,22 @@ public class Main {
                 mean3 += i.getNumAttributes().get(2);
                 mean4 += i.getNumAttributes().get(3);
             }
-
             mean1 = mean1 / centroid.getCentroidAssignments().size();
             mean2 = mean2 / centroid.getCentroidAssignments().size();
             mean3 = mean3 / centroid.getCentroidAssignments().size();
             mean4 = mean4 / centroid.getCentroidAssignments().size();
-
-            if (centroid.getNumAttributes().get(0) == mean1 &&
-                    centroid.getNumAttributes().get(1) == mean2 &&
-                    centroid.getNumAttributes().get(2) == mean3 &&
-                    centroid.getNumAttributes().get(3) == mean4)
-            {
+            if (centroid.getNumAttributes().get(0) == mean1 && centroid.getNumAttributes().get(1) == mean2 &&
+                    centroid.getNumAttributes().get(2) == mean3 && centroid.getNumAttributes().get(3) == mean4) {
                 numOfReps++;
             }
-
             if (numOfReps == centroids.size()) {
                 return false;
             }
-
             ArrayList<Double> newNumAttributes = new ArrayList<>();
             newNumAttributes.add(mean1);
             newNumAttributes.add(mean2);
             newNumAttributes.add(mean3);
             newNumAttributes.add(mean4);
-
             centroid.setNumAttributes(newNumAttributes);
         }
         return true;
